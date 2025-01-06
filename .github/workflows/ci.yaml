@@ -14,3 +14,8 @@ jobs:
         run: echo "Welcome to CI Pipeline"
       - name: Clone The Repository
         uses: actions/checkout@v4
+      - name: Installing HTMLLiter
+        run: npm install --save-dev htmlhint
+      - name: Run HTML Linter
+        run: npx htmlhint "**/*.html"
+        
